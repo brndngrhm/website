@@ -1,0 +1,31 @@
+---
+title: Use Changepoint Detection to Analyze Your Intervals
+author: Brendan Graham
+date: '2019-11-27'
+slug: use-changepoint-detection-to-analyze-your-intervals
+categories: [R, algorithm, cycing]
+tags: []
+subtitle: 'Learn how to apply a changepoint detection algorithm to automatically identify changes in a process'
+summary: 'Learn how to apply a changepoint detection algorithm to automatically identify changes in a process'
+authors: []
+lastmod: '2019-11-27T14:28:25-05:00'
+image:
+  caption: '[Photo by Lindsay Henwood on Unsplash](https://unsplash.com/photos/7_kRuX1hSXM)'
+  focal_point: Smart
+projects: [my_ride]
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: true
+    toc_depth: 1
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(eval = FALSE, collapse = TRUE, comment = NA, tidy = FALSE)
+```
+
+# Intro and Motivation
+
+# Tools and Data
+
+# Process

@@ -1,0 +1,15 @@
+# Font style metadata
+name = "bg_theme"
+
+# Optional Google font URL
+google_fonts = "Roboto|Work+Sans|Roboto+Mono"
+
+# Font families
+heading_font = "Work+Sans"
+body_font = "Roboto"
+nav_font = "Roboto"
+mono_font = "Roboto Mono"
+
+# Font size
+font_size = "15"
+font_size_small = "18"

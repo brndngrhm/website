@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>All Talks | Brendan Graham</title>
+    <link>/talk/</link>
+      <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>All Talks</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Mon, 27 Jan 2020 11:40:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>All Talks</title>
+      <link>/talk/</link>
+    </image>
+    
+    <item>
+      <title>Shiny New Things - Using R to Bridge the Gap in EMR Reporting</title>
+      <link>/talk/rstudio_conf_2020/</link>
+      <pubDate>Mon, 27 Jan 2020 11:40:00 +0000</pubDate>
+      <guid>/talk/rstudio_conf_2020/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Check back later and click on the &lt;strong&gt;Video&lt;/strong&gt; button above to view the recorded talk
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s [*Slides*](https://sourcethemes.com/academic/docs/managing-content/#create-slides) feature and link using `slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Talks &amp; Presentations</title>
+      <link>/talks/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/talks/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>algorithm | Brendan Graham</title>
+    <link>/categories/algorithm/</link>
+      <atom:link href="/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <description>algorithm</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>algorithm</title>
+      <link>/categories/algorithm/</link>
+    </image>
+    
+    <item>
+      <title>Use Changepoint Detection to Analyze Your Intervals</title>
+      <link>/post/use-changepoint-detection-to-analyze-your-intervals/</link>
+      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>/post/use-changepoint-detection-to-analyze-your-intervals/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#intro-and-motivation&#34;&gt;Intro and Motivation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tools-and-data&#34;&gt;Tools and Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#process&#34;&gt;Process&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;intro-and-motivation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Intro and Motivation&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tools-and-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Tools and Data&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;process&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Process&lt;/h1&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
