@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R | Brendan Graham</title>
-    <link>/categories/r/</link>
-      <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <link>/brendangraham.netlify.com/categories/r/</link>
+      <atom:link href="/brendangraham.netlify.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>/brendangraham.netlify.com/img/icon-192.png</url>
       <title>R</title>
-      <link>/categories/r/</link>
+      <link>/brendangraham.netlify.com/categories/r/</link>
     </image>
     
     <item>
       <title>Parsing XML &amp; Creating Interactive Maps with Leaflet in R</title>
-      <link>/post/creating-interactive-maps-with-leaflet/</link>
+      <link>/brendangraham.netlify.com/post/creating-interactive-maps-with-leaflet/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/post/creating-interactive-maps-with-leaflet/</guid>
+      <guid>/brendangraham.netlify.com/post/creating-interactive-maps-with-leaflet/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -54,9 +54,9 @@
     
     <item>
       <title>Use Changepoint Detection to Analyze Your Intervals</title>
-      <link>/post/use-changepoint-detection-to-analyze-your-intervals/</link>
+      <link>/brendangraham.netlify.com/post/use-changepoint-detection-to-analyze-your-intervals/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/post/use-changepoint-detection-to-analyze-your-intervals/</guid>
+      <guid>/brendangraham.netlify.com/post/use-changepoint-detection-to-analyze-your-intervals/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;

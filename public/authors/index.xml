@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | Brendan Graham</title>
-    <link>/authors/</link>
-      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <link>/brendangraham.netlify.com/authors/</link>
+      <atom:link href="/brendangraham.netlify.com/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>/brendangraham.netlify.com/img/icon-192.png</url>
       <title>Authors</title>
-      <link>/authors/</link>
+      <link>/brendangraham.netlify.com/authors/</link>
     </image>
     
     <item>
       <title></title>
-      <link>/authors/admin/</link>
+      <link>/brendangraham.netlify.com/authors/admin/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/authors/admin/</guid>
+      <guid>/brendangraham.netlify.com/authors/admin/</guid>
       <description>&lt;p&gt;I am a senior clinical data analyst at the Center for Healthcare Quality and Analytics (CHQA) at the Children&amp;rsquo;s Hospital of Philadelphia, where I get to apply my data analysis, statistics and visualization skills on a wide range of operational and quality improvement projects.&lt;/p&gt;
 
 &lt;p&gt;I enjoy working with stakeholders to make data operational - whether that means visualizing data in new and useful ways, using data to improve workflows (like automating a previously manual process) and or using predictive modelling to understand and anticipate patient flow.&lt;/p&gt;
@@ -27,9 +27,9 @@
     
     <item>
       <title>Robert Ford</title>
-      <link>/authors/robert-ford/</link>
+      <link>/brendangraham.netlify.com/authors/robert-ford/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/authors/robert-ford/</guid>
+      <guid>/brendangraham.netlify.com/authors/robert-ford/</guid>
       <description></description>
     </item>
     
