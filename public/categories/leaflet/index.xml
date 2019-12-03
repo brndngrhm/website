@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>leaflet | Brendan Graham</title>
-    <link>/brendangraham.netlify.com/categories/leaflet/</link>
-      <atom:link href="/brendangraham.netlify.com/categories/leaflet/index.xml" rel="self" type="application/rss+xml" />
+    <link>/categories/leaflet/</link>
+      <atom:link href="/categories/leaflet/index.xml" rel="self" type="application/rss+xml" />
     <description>leaflet</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/brendangraham.netlify.com/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>leaflet</title>
-      <link>/brendangraham.netlify.com/categories/leaflet/</link>
+      <link>/categories/leaflet/</link>
     </image>
     
     <item>
       <title>Parsing XML &amp; Creating Interactive Maps with Leaflet in R</title>
-      <link>/brendangraham.netlify.com/post/creating-interactive-maps-with-leaflet/</link>
+      <link>/post/creating-interactive-maps-with-leaflet/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/brendangraham.netlify.com/post/creating-interactive-maps-with-leaflet/</guid>
+      <guid>/post/creating-interactive-maps-with-leaflet/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;

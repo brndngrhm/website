@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cycling Analytics | Brendan Graham</title>
-    <link>/brendangraham.netlify.com/tags/cycling-analytics/</link>
-      <atom:link href="/brendangraham.netlify.com/tags/cycling-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/cycling-analytics/</link>
+      <atom:link href="/tags/cycling-analytics/index.xml" rel="self" type="application/rss+xml" />
     <description>Cycling Analytics</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/brendangraham.netlify.com/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Cycling Analytics</title>
-      <link>/brendangraham.netlify.com/tags/cycling-analytics/</link>
+      <link>/tags/cycling-analytics/</link>
     </image>
     
     <item>
       <title>MyRide</title>
-      <link>/brendangraham.netlify.com/project/my_ride/</link>
+      <link>/project/my_ride/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/brendangraham.netlify.com/project/my_ride/</guid>
+      <guid>/project/my_ride/</guid>
       <description>
 
 &lt;p&gt;This purpose of this app is to help cyclists review and analyze their interval workout to see if they hit the right numbers.&lt;/p&gt;
@@ -33,9 +33,9 @@
     
     <item>
       <title>RideTracker</title>
-      <link>/brendangraham.netlify.com/project/ride_tracker/</link>
+      <link>/project/ride_tracker/</link>
       <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/brendangraham.netlify.com/project/ride_tracker/</guid>
+      <guid>/project/ride_tracker/</guid>
       <description>&lt;p&gt;The &lt;a href=&#34;https://brndngrhm.shinyapps.io/RideTracker/&#34; target=&#34;_blank&#34;&gt;RideTracker&lt;/a&gt; app was the first reactive data viz app I developed. It provides a way for me to track my training and commuting, in both a weekly snapshot view as well as over time, in ways that the &lt;a href=&#34;https://github.com/fawda123/rStrava&#34; target=&#34;_blank&#34;&gt;Strava&lt;/a&gt; user profile page doesn&amp;rsquo;t provide.&lt;/p&gt;
 
 &lt;p&gt;At the time, I&amp;rsquo;d been seeing so many cool examples of Shiny apps and really wanted to make my own. I decided to make one using my Cycling data because I had just started to take training seriously and began racing competitively. I was looking for a way to analyze my training volume on a weekly basis and comparatively over time. The App is built on the &lt;code&gt;flexdashboard&lt;/code&gt; framework with a &lt;code&gt;Shiny&lt;/code&gt; reactive engine allowing me to dynamically filter the charts based on the sidebar inputs. I was able to retrieve my data using the &lt;a href=&#34;https://github.com/fawda123/rStrava&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;rStrava&lt;/code&gt; package&lt;/a&gt;, and created all the charts using the  &lt;code&gt;highcharter&lt;/code&gt; package.&lt;/p&gt;

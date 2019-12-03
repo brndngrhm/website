@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Other | Brendan Graham</title>
-    <link>/brendangraham.netlify.com/tags/other/</link>
-      <atom:link href="/brendangraham.netlify.com/tags/other/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/other/</link>
+      <atom:link href="/tags/other/index.xml" rel="self" type="application/rss+xml" />
     <description>Other</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Sun, 24 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/brendangraham.netlify.com/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Other</title>
-      <link>/brendangraham.netlify.com/tags/other/</link>
+      <link>/tags/other/</link>
     </image>
     
     <item>
       <title>Wissahickon Valley Park Explorer</title>
-      <link>/brendangraham.netlify.com/project/wissahickon/</link>
+      <link>/project/wissahickon/</link>
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/brendangraham.netlify.com/project/wissahickon/</guid>
+      <guid>/project/wissahickon/</guid>
       <description>&lt;p&gt;The motivation for creating this app is two-fold:&lt;br /&gt;
   1. I couldnt find something like this online and I wanted it, so I made it, and&lt;br /&gt;
   2. It gave me the oppurtnity to learn more about creating interactive maps in R, specifically using the &lt;code&gt;leaflet&lt;/code&gt; package.&lt;/p&gt;

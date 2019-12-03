@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cycing | Brendan Graham</title>
-    <link>/brendangraham.netlify.com/categories/cycing/</link>
-      <atom:link href="/brendangraham.netlify.com/categories/cycing/index.xml" rel="self" type="application/rss+xml" />
+    <link>/categories/cycing/</link>
+      <atom:link href="/categories/cycing/index.xml" rel="self" type="application/rss+xml" />
     <description>cycing</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/brendangraham.netlify.com/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>cycing</title>
-      <link>/brendangraham.netlify.com/categories/cycing/</link>
+      <link>/categories/cycing/</link>
     </image>
     
     <item>
       <title>Use Changepoint Detection to Analyze Your Intervals</title>
-      <link>/brendangraham.netlify.com/post/use-changepoint-detection-to-analyze-your-intervals/</link>
+      <link>/post/use-changepoint-detection-to-analyze-your-intervals/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/brendangraham.netlify.com/post/use-changepoint-detection-to-analyze-your-intervals/</guid>
+      <guid>/post/use-changepoint-detection-to-analyze-your-intervals/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;

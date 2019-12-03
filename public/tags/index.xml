@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Brendan Graham</title>
-    <link>/brendangraham.netlify.com/tags/</link>
-      <atom:link href="/brendangraham.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/</link>
+      <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/brendangraham.netlify.com/img/icon-192.png</url>
+      <url>/img/icon-192.png</url>
       <title>Tags</title>
-      <link>/brendangraham.netlify.com/tags/</link>
+      <link>/tags/</link>
     </image>
     
     <item>
       <title>Cycling Analytics</title>
-      <link>/brendangraham.netlify.com/tags/cycling-analytics/</link>
+      <link>/tags/cycling-analytics/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/brendangraham.netlify.com/tags/cycling-analytics/</guid>
+      <guid>/tags/cycling-analytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Viz</title>
-      <link>/brendangraham.netlify.com/tags/data-viz/</link>
+      <link>/tags/data-viz/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/brendangraham.netlify.com/tags/data-viz/</guid>
+      <guid>/tags/data-viz/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Other</title>
-      <link>/brendangraham.netlify.com/tags/other/</link>
+      <link>/tags/other/</link>
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/brendangraham.netlify.com/tags/other/</guid>
+      <guid>/tags/other/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Source Themes</title>
-      <link>/brendangraham.netlify.com/tags/source-themes/</link>
+      <link>/tags/source-themes/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/brendangraham.netlify.com/tags/source-themes/</guid>
+      <guid>/tags/source-themes/</guid>
       <description></description>
     </item>
     
