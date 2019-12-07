@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R | Brendan Graham</title>
-    <link>/categories/r/</link>
-      <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
-    <description>R</description>
+    <title>Netlify | Brendan Graham</title>
+    <link>/categories/netlify/</link>
+      <atom:link href="/categories/netlify/index.xml" rel="self" type="application/rss+xml" />
+    <description>Netlify</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Sat, 07 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
-      <title>R</title>
-      <link>/categories/r/</link>
+      <title>Netlify</title>
+      <link>/categories/netlify/</link>
     </image>
     
     <item>
@@ -139,73 +139,6 @@ subtitle = &amp;quot;&amp;quot;
 &lt;/li&gt;
 &lt;li&gt;I add &lt;code&gt;draft = TRUE&lt;/code&gt; until I’m ready to post&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Parsing XML &amp; Creating Interactive Maps with Leaflet in R</title>
-      <link>/post/creating-interactive-maps-with-leaflet/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/post/creating-interactive-maps-with-leaflet/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#motivation&#34;&gt;Motivation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-prep&#34;&gt;Data Prep&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#process&#34;&gt;Process&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;motivation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Motivation&lt;/h1&gt;
-&lt;p&gt;Shortly after moving to the Wissahickon neighborhood, I was looking for a detailed map of the Wissahickon Valley Park to plan some hikes and learn more about the woods. A lot of the maps I found through googling were either too detailed or not detailed enough, and almost none were interactive. One of the best maps I found was this one below - it has the right level of detail and big picture view I was looking for, but I never heard back from the creator about purchasing a print.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;wiss_map.jpg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;(source: &lt;a href=&#34;http://phillyskyline.com/2015/04/22/happy-earth-day-and-other-assorted-one-mans-trash-affairs/&#34; class=&#34;uri&#34;&gt;http://phillyskyline.com/2015/04/22/happy-earth-day-and-other-assorted-one-mans-trash-affairs/&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;After some more goolging I found this &lt;a href=&#34;https://www.google.com/maps/d/u/0/viewer?mid=13bnd0IRNwzTpI7VFPASNSWXC5yk&#34;&gt;interactive map&lt;/a&gt; created by the Friends of the Wissahickon. It has a lot of the park attrractions I was looking for in a map, but I really wanted to be able to make it my own and document my hiking loops, notes and tips. Rather than just make a copy of the Google map, I decided to create my own using &lt;code&gt;leaflet&lt;/code&gt; and &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-prep&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Data Prep&lt;/h1&gt;
-&lt;p&gt;To get started, I created a copy of the Friends of the Wissahickon map and exported each layer (Kiosks, Parking, Trailheads…) as its own &lt;code&gt;.KMZ&lt;/code&gt; file, then used &lt;a href=&#34;https://www.gpsvisualizer.com/convert_input&#34; class=&#34;uri&#34;&gt;https://www.gpsvisualizer.com/convert_input&lt;/a&gt; to convert the &lt;code&gt;.KMZ&lt;/code&gt; file to &lt;code&gt;.GPX&lt;/code&gt;. A &lt;code&gt;.GPX&lt;/code&gt; file is basically &lt;code&gt;XML&lt;/code&gt; flavored with some GPS data, so once I had the all of the &lt;code&gt;.GPX&lt;/code&gt; files, I was able to use the amazing &lt;code&gt;XML&lt;/code&gt; R package to parse the &lt;code&gt;XML&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;As someone used to working with dataframes, parsing XML in R can be tricky. There’s lots of XML parsing posts out there but here’s what worked for me:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Understand the structure of the XML file&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;the file&lt;/p&gt;
-&lt;div id=&#34;hikes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Hikes&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;process&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Process&lt;/h1&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Use Changepoint Detection to Analyze Your Intervals</title>
-      <link>/post/use-changepoint-detection-to-analyze-your-intervals/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/post/use-changepoint-detection-to-analyze-your-intervals/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#intro-and-motivation&#34;&gt;Intro and Motivation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tools-and-data&#34;&gt;Tools and Data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#process&#34;&gt;Process&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;intro-and-motivation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Intro and Motivation&lt;/h1&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tools-and-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Tools and Data&lt;/h1&gt;
-&lt;/div&gt;
-&lt;div id=&#34;process&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Process&lt;/h1&gt;
 &lt;/div&gt;
 </description>
     </item>

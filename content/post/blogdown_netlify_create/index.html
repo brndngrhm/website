@@ -1,0 +1,146 @@
+---
+title: Customizing a Website with R, Blogdown, Hugo and Netlify
+author: Brendan Graham
+date: '2019-12-07'
+slug: blogdown_netlify_create
+categories: [R, Blogdown, Hugo, Netlify]
+tags: []
+subtitle: 'Drawing the Rest of the F*cking Owl'
+summary: 'Learn how to customize the Academic Hugo Theme'
+authors: []
+lastmod: '2019-12-07T10:01:04-05:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: false
+    toc_depth: 1
+---
+
+
+
+<p>This post isn’t about getting you set up with R Studio, Blogdown, Hugo and Netlify. If you’ve come across this and are just starting out, go read <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#build-your-site-in-rstudio">this post</a> instead, its simply the best quick start guide on getting your site started.</p>
+<p>This post is for once you’ve started your R studio project, picked a theme, and now you want to customize the theme. This post will specifically cover how to customize the <code>Academic</code> Hugo theme. I found that when I first applied the Academic theme, my site preview looked nothing like the ones I was seeing online. Through some troubleshooting and luck I eventually figured out how to edit the theme and was able to set up my site how I wanted.</p>
+<div id="some-helpful-links" class="section level4">
+<h4>Some helpful links:</h4>
+<ul>
+<li><a href="https://sourcethemes.com/academic/docs/">Hugo Academic Docs</a></li>
+</ul>
+</div>
+<div id="editing-the-main-page" class="section level3">
+<h3>Editing the Main Page</h3>
+<ul>
+<li>The personal information on the main page is stored in <code>content/authors/admin/_index.md</code><br />
+</li>
+<li>The rest of the elements on the first page are located in various <code>.md</code> files in <code>content &gt; home</code>
+<ul>
+<li>to turn the default “sections” on the homepage on / off: in the <code>.md</code> YAML set <code>active = TRUE</code> or <code>active = FALSE</code></li>
+</ul></li>
+<li>The menu bar is located in <code>config/_default/menus.toml</code>
+<ul>
+<li>Here you can rename or re-order the top menu bar options</li>
+<li>If you add pages later on, you’ll have to also add a menu item and include the right link to the page</li>
+</ul></li>
+</ul>
+</div>
+<div id="single-scrolling-vs-multiple-pages" class="section level3">
+<h3>Single Scrolling vs Multiple Pages</h3>
+<p>When you first preview the Academic theme, it is a single scrolling page and clicking on a menu item at the top scrolls the page down for the user. I preferred to have multiple pages. To do this is required several steps:</p>
+<ul>
+<li><p>create a new sub-folder in the <code>content</code>. For example I wanted a Talks page, so I created a <code>talks</code> folder within <code>content</code> folder. Then in <code>config/_default/menus.toml</code> I added a menu item to link to the new talks page:</p>
+<pre><code> ```
+ [[main]]
+   name = &quot;Talks&quot;
+   url = &quot;/talks&quot;
+   weight = 30
+ ```</code></pre></li>
+</ul>
+</div>
+<div id="adding-content-to-newly-created-pages" class="section level3">
+<h3>Adding Content to Newly Created Pages</h3>
+<p>This gets confusing and was the hardest part of this to wrap my head around. disclaimer – I’m no expert on this workflow the following is my (possibly incorrect) understanding of the workflow.</p>
+<p>Hugo seems to use <em>widgets</em> to style and format markdown files. This requires each page to have 2 folders within the <code>content</code> folder: one folder for the <em>widget</em> and one for the <strong>content</strong>. There are widgets for various formats: talks, blogs, skills, contact…. See an example of this <a href="https://github.com/brndngrhm/website/tree/master/content">here</a> - note the <code>project</code> and <code>projects</code> folders, where <code>projects</code> has the widget and <code>project</code> has the content tat you see on the page.</p>
+<p>It might be easier to just copy and paste the <code>project</code> and <code>projects</code> folders into your website <code>content</code> folder and change some stuff to get a sense of how they work, but I will try to explain below:</p>
+<p>The <code>projects</code> folder (aka the <em>widget</em> folder) has 2 files: <code>index.md</code> and <code>projects.md</code>.</p>
+<p><code>index.md</code> just has this in it:</p>
+<pre><code>---
+date: &quot;2019-01-01T00:00:00Z&quot;
+summary: my projects
+title: Project page
+type: widget_page
+---</code></pre>
+<p><code>projects.md</code> is the <em>widget</em> page, specifically a <em>portfolio widget</em> page. This file has all the formatting for the content in the <code>project</code> folder. Note the YAML specifying the widget type:</p>
+<pre><code>  ```
+# A Projects section created with the Portfolio widget.
+widget = &quot;portfolio&quot;  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
+weight = 65  # Order that this section will appear.
+
+title = &quot;Projects&quot;
+subtitle = &quot;&quot;
+
+[content]
+  # Page type to display. E.g. project.
+  page_type = &quot;project&quot;
+      
+  etc...
+  
+  ```</code></pre>
+<p>The <code>project</code> folder (aka the content folder) has a folder for each project. Within each folder is an <code>index.md</code> file that contains the written content (the file has specific YAML for it to work correctly with the content), as well as all the images used. The main image that appears on the project page must be saved as <code>feature.jpg</code> for it to show up automatically.</p>
+<p>This is where my understanding gets fuzzy - I am not totally sure how the <em>widget</em> in the <code>projects</code> folder “knows” to style the content in the <code>project</code> folder. I can’t find an obvious connection, other than the name of the content folder, <code>project</code>, is the same as the <code>page_type</code> in the <code>projects.md</code> folder.</p>
+</div>
+<div id="custom-themes-and-fonts" class="section level3">
+<h3>Custom Themes and Fonts</h3>
+<p>Preset themes are stored in <code>themes/hugo-academic/data/themes</code>. Your options:</p>
+<ul>
+<li>Pick one of these and put in <code>data/themes/my_theme.toml</code> and specify it in <code>config/_default/params.toml</code><br />
+</li>
+<li>Create your own then in tell Academic to use your new theme by setting <code>theme = &quot;my_theme&quot;</code> in <code>config/_default/params.toml</code></li>
+</ul>
+<p>To make your own theme, find one you like and copy it: for example here is my theme, which is stored in <code>data/themes/</code>:</p>
+<pre><code>  # Theme metadata
+  name = &quot;bg_theme&quot;
+  
+  # Is theme light or dark?
+  light = true
+  
+  # Primary
+  primary = &quot;#f13c20&quot; #&quot;#E13D3D&quot;
+  
+  # Menu
+  menu_primary = &quot;#fdfbf2&quot;
+  menu_text = &quot;#333&quot;
+  menu_text_active = &quot;#d03b39&quot;
+  menu_title = &quot;#333&quot;
+  
+  # Backgrounds
+  background =  &quot;#fdfbf2&quot; # &quot;#EAE7DC&quot;  # &quot;#f2fbfe&quot; # &quot;#fbf9f4&quot;
+  home_section_odd = &quot;#fdfbf2&quot;
+  home_section_even = &quot;#fdfbf2&quot;
+  </code></pre>
+<p>then in <code>config/_default/params.toml</code> i have <code>theme = &quot;bg_theme&quot;</code></p>
+<p>The same process applies to picking your own fonts as well (see <a href="https://sourcethemes.com/academic/docs/customization/#custom-theme">Academic Custom Theme &amp; Font docs</a>)</p>
+</div>
+<div id="new-posts" class="section level3">
+<h3>New posts</h3>
+<p>For each post, I do the following</p>
+<ul>
+<li>Before creating the new post I create a sub-folder in the <code>content/post</code> folder<br />
+</li>
+<li>Then I use the R Studio add-in: “New Post”<br />
+</li>
+<li>I use “index” for the Title. I do this because its the only way that seems to work with the feature image</li>
+<li>Change the past to <code>post/whatever_folder_you_want_to_save_it_in</code></li>
+<li>Delete the date in front of the file name<br />
+</li>
+<li>Pick “R Markdown (.Rmd)”as format<br />
+</li>
+<li>I add <code>draft = TRUE</code> until I’m ready to post</li>
+</ul>
+</div>

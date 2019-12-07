@@ -1,0 +1,145 @@
+---
+title: Customizing a Website with R, Blogdown, Hugo and Netlify
+author: Brendan Graham
+date: '2019-12-07'
+slug: blogdown_netlify_create
+categories: [R, Blogdown, Hugo, Netlify]
+tags: []
+subtitle: 'Drawing the Rest of the F*cking Owl'
+summary: 'Learn how to customize the Academic Hugo Theme'
+authors: []
+lastmod: '2019-12-07T10:01:04-05:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: false
+    toc_depth: 1
+---
+
+This post isn't about getting you set up with R Studio, Blogdown, Hugo and Netlify. If you've come across this and are just starting out, go read [this post](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#build-your-site-in-rstudio) instead, its simply the best quick start guide on getting your site started.
+
+This post is for once you've started your R studio project, picked a theme, and now you want to customize the theme. This post will specifically cover how to customize the `Academic` Hugo theme. I found that when I first applied the Academic theme, my site preview looked nothing like the ones I was seeing online. Through some troubleshooting and luck I eventually figured out how to edit the theme and was able to set up my site how I wanted.
+
+#### Some helpful links:
+
+ * [Hugo Academic Docs](https://sourcethemes.com/academic/docs/) 
+ 
+ 
+### Editing the Main Page
+
+ * The personal information on the main page is stored in `content/authors/admin/_index.md`  
+ * The rest of the elements on the first page are located in various `.md` files in `content > home`
+   * to turn the default “sections” on the homepage on / off: in the `.md` YAML  set `active = TRUE` or `active = FALSE`
+ * The menu bar is located in `config/_default/menus.toml`
+   * Here you can rename or re-order the top menu bar options
+   * If you add pages later on, you'll have to also add a menu item and include the right link to the page
+
+### Single Scrolling vs Multiple Pages
+
+When you first preview the Academic theme, it is a single scrolling page and clicking on a menu item at the top scrolls the page down for the user. I preferred to have multiple pages. To do this is required several steps:  
+
+ * create a new sub-folder in the `content`.  For example I wanted a Talks page, so I created a `talks` folder within `content` folder.  Then in `config/_default/menus.toml` I added a menu item to link to the new talks page:
+ 
+        ```
+        [[main]]
+          name = "Talks"
+          url = "/talks"
+          weight = 30
+        ```
+        
+### Adding Content to Newly Created Pages
+
+This gets confusing and was the hardest part of this to wrap my head around. disclaimer -- I'm no expert on this workflow the following is my (possibly incorrect) understanding of the workflow.
+
+Hugo seems to use _widgets_ to style and format markdown files. This requires each page to have 2 folders within the `content` folder: one folder for the _widget_ and one for the **content**.  There are widgets for various formats: talks, blogs, skills, contact.... See an example of this [here](https://github.com/brndngrhm/website/tree/master/content) - note the `project` and `projects` folders, where `projects` has the widget and `project` has the content tat you see on the page.
+
+It might be easier to just copy and paste the `project` and `projects` folders into your website `content` folder and change some stuff to get a sense of how they work, but I will try to explain below:
+
+
+The `projects` folder (aka the _widget_ folder) has 2 files: `index.md` and `projects.md`.  
+
+`index.md` just has this in it:
+
+    ---
+    date: "2019-01-01T00:00:00Z"
+    summary: my projects
+    title: Project page
+    type: widget_page
+    ---
+
+`projects.md` is the _widget_ page, specifically a _portfolio widget_ page. This file has all the formatting for the content in the `project` folder. Note the YAML specifying the widget type:
+
+      ```
+    # A Projects section created with the Portfolio widget.
+    widget = "portfolio"  # See https://sourcethemes.com/academic/docs/page-builder/
+    headless = true  # This file represents a page section.
+    active = true  # Activate this widget? true/false
+    weight = 65  # Order that this section will appear.
+    
+    title = "Projects"
+    subtitle = ""
+    
+    [content]
+      # Page type to display. E.g. project.
+      page_type = "project"
+          
+      etc...
+      
+      ```
+The `project` folder (aka the content folder) has a folder for each project. Within each folder is an `index.md` file that contains the written content (the file has specific YAML for it to work correctly with the content), as well as all the images used. The main image that appears on the project page must be saved as `feature.jpg` for it to show up automatically.
+
+This is where my understanding gets fuzzy - I am not totally sure how the _widget_ in the `projects` folder "knows" to style the content in the `project` folder. I can't find an obvious connection, other than the name of the content folder, `project`, is the same as the `page_type` in the `projects.md` folder.
+
+
+### Custom Themes and Fonts
+
+Preset themes are stored in `themes/hugo-academic/data/themes`. Your options:  
+
+  *  Pick one of these and put in `data/themes/my_theme.toml` and specify it in `config/_default/params.toml`    
+  *  Create your own then in tell Academic to use your new theme by setting `theme = "my_theme"` in `config/_default/params.toml`  
+  
+To make your own theme, find one you like and copy it: for example here is my theme, which is stored in `data/themes/`:
+
+      # Theme metadata
+      name = "bg_theme"
+      
+      # Is theme light or dark?
+      light = true
+      
+      # Primary
+      primary = "#f13c20" #"#E13D3D"
+      
+      # Menu
+      menu_primary = "#fdfbf2"
+      menu_text = "#333"
+      menu_text_active = "#d03b39"
+      menu_title = "#333"
+      
+      # Backgrounds
+      background =  "#fdfbf2" # "#EAE7DC"  # "#f2fbfe" # "#fbf9f4"
+      home_section_odd = "#fdfbf2"
+      home_section_even = "#fdfbf2"
+      
+then in `config/_default/params.toml` i have `theme = "bg_theme"`
+
+The same process applies to picking your own fonts as well (see [Academic Custom Theme & Font docs](https://sourcethemes.com/academic/docs/customization/#custom-theme))
+       
+
+### New posts
+
+For each post,  I do the following    
+
+  * Before creating the new post I create a sub-folder in the `content/post` folder  
+  * Then I use the R Studio add-in: "New Post"  
+  * I use “index” for the Title. I do this because its the only way that seems to work with the feature image
+  * Change the past to `post/whatever_folder_you_want_to_save_it_in`
+  * Delete the date in front of the file name  
+  * Pick "R Markdown (.Rmd)"as format  
+  * I add `draft = TRUE` until I'm ready to post  
+

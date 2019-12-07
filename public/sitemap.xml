@@ -33,17 +33,42 @@
   </url>
   
   <url>
-    <loc>/categories/algorithm/</loc>
-    <lastmod>2019-11-27T14:28:25-05:00</lastmod>
+    <loc>/post/</loc>
+    <lastmod>2019-12-07T10:01:04-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2019-11-27T14:28:25-05:00</lastmod>
+    <loc>/categories/blogdown/</loc>
+    <lastmod>2019-12-07T10:01:04-05:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
+    <lastmod>2019-12-07T10:01:04-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/blogdown_netlify_create/</loc>
+    <lastmod>2019-12-07T10:01:04-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/hugo/</loc>
+    <lastmod>2019-12-07T10:01:04-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/netlify/</loc>
+    <lastmod>2019-12-07T10:01:04-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2019-12-07T10:01:04-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/algorithm/</loc>
     <lastmod>2019-11-27T14:28:25-05:00</lastmod>
   </url>
   
@@ -95,11 +120,6 @@
   <url>
     <loc>/project/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2019-11-27T14:28:25-05:00</lastmod>
   </url>
   
   <url>

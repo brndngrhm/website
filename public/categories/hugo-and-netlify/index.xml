@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo and Netlify | Brendan Graham</title>
+    <link>/categories/hugo-and-netlify/</link>
+      <atom:link href="/categories/hugo-and-netlify/index.xml" rel="self" type="application/rss+xml" />
+    <description>Hugo and Netlify</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Sat, 07 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Hugo and Netlify</title>
+      <link>/categories/hugo-and-netlify/</link>
+    </image>
+    
+    <item>
+      <title>Creating a Website with R, Blogdown, Hugo and Netlify</title>
+      <link>/post/blogdown_netlify_create/</link>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/post/blogdown_netlify_create/</guid>
+      <description>
+
+
+&lt;p&gt;This posn’t isnt about getting you set up with R Studio, Blogdown, Hugo and Netlify. If you’ve come across this and are just starting out, go read &lt;a href=&#34;https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#build-your-site-in-rstudio&#34;&gt;this post&lt;/a&gt; instead, its simply the best quick start guide on getting your site started.&lt;/p&gt;
+&lt;p&gt;This post is for once you’ve started your R studio project, picked a theme, and now you want to customize the theme. This post will specifically cover how to customize the &lt;code&gt;Academic&lt;/code&gt; Hugo theme. I found that when I first applied the Academic theme, my site preview looked nothing like the ones I was seeing online. Through some troubleshooting and luck I eventually figured out how to edit the theme and was able to set up my site how I wanted.&lt;/p&gt;
+&lt;p&gt;Some helpful links:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34;&gt;Hugo Academic Docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;editing-the-main-page&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Editing the Main Page&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;The personal information on the main page is stored in &lt;code&gt;content &amp;gt; authors &amp;gt; admin &amp;gt; _index.md&lt;/code&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;The rest of the elements on the first page are located in various &lt;code&gt;.md&lt;/code&gt; files in &lt;code&gt;content &amp;gt; home&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;to turn the default “sections” on the homepage on / off: in the &lt;code&gt;.md&lt;/code&gt; YAML set &lt;code&gt;active = TRUE&lt;/code&gt; or &lt;code&gt;active = FALSE&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;The menu bar is located in &lt;code&gt;config &amp;gt; _default &amp;gt; menus.toml&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Here you can rename or re-order the top menu bar options&lt;/li&gt;
+&lt;li&gt;If you add pages later on, you’ll have to also add a menu item and include the right link to the page&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;single-scroller-vs-multiple-pages&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Single Scroller vs Multiple Pages&lt;/h4&gt;
+&lt;p&gt;When you first preview the Academic theme, it is a single scrolling page and clicking on a menu item at the top scrolls the page down for the user. I preferred to have multiple pages. To do this is required several steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;create a new subfolder in the &lt;code&gt;content&lt;/code&gt;. For example I wanted a Talks page, so I created a &lt;code&gt;talks&lt;/code&gt; folder within &lt;code&gt;content&lt;/code&gt; folder. Then in &lt;code&gt;config &amp;gt; _default &amp;gt; menus.toml&lt;/code&gt; I added a menu item to link to the new talks page:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; ```
+ [[main]]
+   name = &amp;quot;Talks&amp;quot;
+   url = &amp;quot;/talks&amp;quot;
+   weight = 30
+ ```&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;adding-content-to-newly-created-pages&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Adding Content to Newly Created Pages&lt;/h4&gt;
+&lt;p&gt;This gets confusing and was the hardest part of this to wrap my head around, but disclaimer – I’m no expert on this workflow.&lt;/p&gt;
+&lt;p&gt;Hugo seems to use &lt;em&gt;widgets&lt;/em&gt; to style and format markdown files. This requires each page to have 2 folders within the &lt;code&gt;content&lt;/code&gt; folder: one folder for the &lt;em&gt;widget&lt;/em&gt; and one for the &lt;strong&gt;content&lt;/strong&gt;. There are widgets for various formats: talks, blogs, skills, contact…. See an example of this &lt;a href=&#34;https://github.com/brndngrhm/website/tree/master/content&#34;&gt;here&lt;/a&gt; - note the &lt;code&gt;project&lt;/code&gt; and &lt;code&gt;projects&lt;/code&gt; folders, where &lt;code&gt;projects&lt;/code&gt; has the widget and &lt;code&gt;project&lt;/code&gt; has the content tat you see on the page.&lt;/p&gt;
+&lt;p&gt;It might be easier to just copy and paste these files into your website folder and change some stuff to get a sense of how they work, but I will try to explain below:&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;projects&lt;/code&gt; folder (aka the &lt;em&gt;widget&lt;/em&gt; folder) has 2 files: &lt;code&gt;index.md&lt;/code&gt; and &lt;code&gt;projects.md&lt;/code&gt;. &lt;code&gt;index.md&lt;/code&gt; just has this in it:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+date: &amp;quot;2019-01-01T00:00:00Z&amp;quot;
+summary: my projects
+title: Project page
+type: widget_page
+---&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;while &lt;code&gt;projects.md&lt;/code&gt; is the &lt;em&gt;widget&lt;/em&gt; page, specifically a &lt;em&gt;portfolio widget&lt;/em&gt; page. This file has all the formatting for the content in the &lt;code&gt;project&lt;/code&gt; folder. Note the YAML:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  ```
+  # A Projects section created with the Portfolio widget.
+  widget = &amp;quot;portfolio&amp;quot;  # See https://sourcethemes.com/academic/docs/page-builder/
+  headless = true  # This file represents a page section.
+  active = true  # Activate this widget? true/false
+  weight = 65  # Order that this section will appear.
+  ```&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In &lt;code&gt;content &amp;gt; projects&lt;/code&gt; add a file called &lt;code&gt;projects&lt;/code&gt; and &lt;code&gt;index.md&lt;/code&gt;. In R Studio you can create a &lt;code&gt;.md&lt;/code&gt; file by doing &lt;code&gt;File &amp;gt; New File &amp;gt; Text File&lt;/code&gt;, then when you save it, add &lt;code&gt;.md&lt;/code&gt; as the extension.&lt;/p&gt;
+&lt;p&gt;As far as I can tell, each page folder needs an &lt;code&gt;index.md&lt;/code&gt; file with the &lt;em&gt;just&lt;/em&gt; following in it (with summary and title specific to each page):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+date: &amp;quot;2019-01-01T00:00:00Z&amp;quot;
+summary: A page for talks and presentations
+title: Talks &amp;amp; Presentations
+type: widget_page
+---&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next create another subfolder, called &lt;code&gt;talk&lt;/code&gt; (note thats talk, not talk&lt;strong&gt;s&lt;/strong&gt;) within the &lt;code&gt;content&lt;/code&gt; folder&lt;/p&gt;
+&lt;p&gt;Now create another file in &lt;code&gt;content &amp;gt; talks&lt;/code&gt; called &lt;code&gt;talks.md&lt;/code&gt;. This is going to be a &lt;em&gt;Hugo pages widget&lt;/em&gt;, which is used to apply some stying to the page. These widges just format and stylize content located in another folder - so this &lt;strong&gt;Talks Widget&lt;/strong&gt; tells the site how to display the content located in &lt;code&gt;content &amp;gt; talk&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This gets confusing and was the hardest part of this to wrap my head around.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
