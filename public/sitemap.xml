@@ -33,6 +33,31 @@
   </url>
   
   <url>
+    <loc>/project/</loc>
+    <lastmod>2019-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r-resources/</loc>
+    <lastmod>2019-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/r_resources/</loc>
+    <lastmod>2019-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/resource/</loc>
+    <lastmod>2019-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
     <lastmod>2019-12-07T10:01:04-05:00</lastmod>
   </url>
@@ -118,12 +143,7 @@
   </url>
   
   <url>
-    <loc>/project/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
+    <loc>/tags/project/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url>
   

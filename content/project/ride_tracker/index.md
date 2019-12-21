@@ -11,6 +11,7 @@ links:
   url: https://twitter.com/brndngrhm
 summary: Data viz project tracking my cycling habits
 tags:
+- Project
 - Cycling Analytics
 - Data Viz
 title: RideTracker

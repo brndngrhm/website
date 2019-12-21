@@ -11,6 +11,7 @@ links:
   url: https://twitter.com/brndngrhm
 summary: Plan your trip to the Wiss using this app!
 tags:
+- Project
 - Other
 title: Wissahickon Valley Park Explorer
 url_code:

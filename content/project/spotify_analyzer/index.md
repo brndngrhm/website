@@ -11,6 +11,7 @@ links:
   url: https://twitter.com/brndngrhm
 summary: Use the Spotify API to analyze your favorite artists songs
 tags:
+- Project
 - Data Viz
 title: Everyone Everywhere Music Analysis Tool
 url_code:

@@ -20,6 +20,12 @@
   weight = 20
   
 [[main]]
+  name = "Resources"
+  #url = "/projects" #use this when you want to go to the Projects Page
+  url = "#resources" #use this when you want to scroll to Porjects section
+  weight = 25
+  
+[[main]]
   name = "Talks"
   url = "#talks"
   weight = 30

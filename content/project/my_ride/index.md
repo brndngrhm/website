@@ -11,6 +11,7 @@ links:
   url: https://twitter.com/brndngrhm
 summary: Applying changepoint detection to analyze interval workouts
 tags:
+- Project
 - Cycling Analytics
 title: MyRide
 url_code:

@@ -107,6 +107,17 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     </item>
     
     <item>
+      <title>R Resources</title>
+      <link>/project/r_resources/</link>
+      <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/project/r_resources/</guid>
+      <description>
+
+&lt;h3 id=&#34;coming-soon&#34;&gt;Coming Soon!!&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Customizing a Website with R, Blogdown, Hugo and Netlify</title>
       <link>/post/blogdown_netlify_create/</link>
       <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
