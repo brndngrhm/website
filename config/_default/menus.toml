@@ -15,17 +15,18 @@
   
 [[main]]
   name = "Projects"
-  url = "/projects"
+  #url = "/projects" #use this when you want to go to the Projects Page
+  url = "#projects" #use this when you want to scroll to Porjects section
   weight = 20
   
 [[main]]
   name = "Talks"
-  url = "/talks"
+  url = "#talks"
   weight = 30
 
 [[main]]
   name = "Experience & Contact"
-  url = "/contact"
+  url = "#experience"
   weight = 40
 
 #[[main]]
