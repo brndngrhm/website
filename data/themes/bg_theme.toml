@@ -2,18 +2,21 @@
 name = "bg_theme"
 
 # Is theme light or dark?
-light = true
+light = false 
 
 # Primary
 primary = "#f13c20" #"#E13D3D"
 
 # Menu
-menu_primary =  "#f3f3f3" #"#fdfbf2"
-menu_text = "#333"
-menu_text_active = "#d03b39"
-menu_title = "#333"
+menu_primary = "#1d252c" #"#fdfbf2"
+menu_text = "#319fa8"
+menu_text_active = "#319fa8"
+menu_title = "#319fa8" #"#333" 
+
 
 # Backgrounds
-background =  "#EBE6E6" #fdfbf2" # "#EAE7DC"  # "#f2fbfe" # "#fbf9f4"
-home_section_odd = "#f3f3f3"
-home_section_even = "#EBE6E6"
+background =  "#1d252c "#"#EBE6E6" #fdfbf2" # "#EAE7DC"  # "#f2fbfe" # "#fbf9f4"
+home_section_odd = "#1d252c"
+home_section_even = "#1d252c" 
+
+# pink #c26f7d
