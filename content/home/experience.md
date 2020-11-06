@@ -13,7 +13,7 @@ subtitle = ""
 date_format = "Jan 2006"
 
 [[experience]]
-  title = "Senior Clinical Data Analyst"
+  title = "Data Scientist"
   company = "Children's Hospital of Philadelphia"
   company_url = "https://www.chop.edu/centers-programs/quality-and-patient-safety"
   location = "Philadelphia, PA"

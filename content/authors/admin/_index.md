@@ -22,7 +22,7 @@ name: Brendan Graham
 organizations:
 - name: Children's Hospital of Philadelphia
   url: ""
-role: Senior Clinical Data Analyst
+role: Data Scientist
 social:
 - icon: envelope
   icon_pack: fas
@@ -36,7 +36,7 @@ social:
 superuser: true
 ---
 
-I am a senior clinical data analyst at the Center for Healthcare Quality and Analytics (CHQA) at the Children's Hospital of Philadelphia, where I get to apply my data analysis, statistics and visualization skills on a wide range of operational and quality improvement projects.
+I am a Data Scientist at the Center for Healthcare Quality and Analytics (CHQA) at the Children's Hospital of Philadelphia, where I get to apply my data analysis, statistics and visualization skills on a wide range of operational and quality improvement projects.
 
 
 I enjoy working with stakeholders to make data operational - whether that means visualizing data in new and useful ways, using data to improve workflows (like automating a previously manual process) and or using predictive modelling to understand and anticipate patient flow.

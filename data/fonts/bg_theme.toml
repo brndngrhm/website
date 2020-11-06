@@ -2,14 +2,14 @@
 name = "bg_theme"
 
 # Optional Google font URL
-google_fonts = "Roboto|Work+Sans|Roboto+Mono"
+google_fonts = "Barlow|Work+Sans|Roboto+Mono"
 
 # Font families
 heading_font = "Work+Sans"
-body_font = "Roboto"
-nav_font = "Roboto"
+body_font = "Barlow"
+nav_font = "Barlow" 
 mono_font = "Roboto Mono"
 
 # Font size
 font_size = "15"
-font_size_small = "18"
+font_size_small = "18" 

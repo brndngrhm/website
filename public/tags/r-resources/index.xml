@@ -5,7 +5,7 @@
     <link>/tags/r-resources/</link>
       <atom:link href="/tags/r-resources/index.xml" rel="self" type="application/rss+xml" />
     <description>R Resources</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Sat, 21 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2020</copyright><lastBuildDate>Sat, 21 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>R Resources</title>
@@ -17,10 +17,52 @@
       <link>/project/r_resources/</link>
       <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
       <guid>/project/r_resources/</guid>
-      <description>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;library(rtweet)
+library(dplyr)
+library(lubridate)
+library(reactable)
 
-&lt;h3 id=&#34;coming-soon&#34;&gt;Coming Soon!!&lt;/h3&gt;
-</description>
+show_tweet &amp;lt;- function(user){
+  get_timeline(user, n=3200) %&amp;gt;% 
+    mutate(year = year(created_at)) %&amp;gt;% 
+    filter(year == 2019) %&amp;gt;% 
+    arrange(-favorite_count) %&amp;gt;% 
+    slice(1) %&amp;gt;% 
+    pull(status_id) %&amp;gt;% 
+    paste0(&#39;https://twitter.com/&#39;, user,  &#39;/status/&#39;, .) %&amp;gt;% browseURL()
+}
+
+
+favs_raw &amp;lt;- rtweet::get_favorites(&amp;quot;brndngrhm&amp;quot;, n = 3000)
+
+hashtags &amp;lt;- favs_raw %&amp;gt;%
+  select(status_id, hashtags) %&amp;gt;%
+  as.data.frame()
+
+hashtags$hashtags &amp;lt;- sapply(hashtags$hashtags, paste, collapse=&amp;quot;,&amp;quot;)
+
+favs &amp;lt;- favs_raw %&amp;gt;%
+  select(-hashtags) %&amp;gt;%
+  left_join(., hashtags, by = &amp;quot;status_id&amp;quot;) %&amp;gt;%
+  arrange(desc(created_at)) %&amp;gt;%
+  mutate(created_at = as.Date(created_at),
+         hashtags = gsub(&#39;,&#39;,&#39;; &#39;, hashtags),
+         hashtags = ifelse(hashtags == &amp;quot;NA&amp;quot;, &amp;quot; &amp;quot;, hashtags),
+         tweet_link =  paste0(&amp;quot;&amp;lt;a href=&#39;https://twitter.com/&amp;quot;, screen_name,  &amp;quot;/status/&amp;quot;, status_id, &amp;quot;&#39; target=&#39;_blank&#39;&amp;gt; Go To Tweet &amp;lt;/a&amp;gt;&amp;quot;),
+         content_link = ifelse(!is.na(urls_url), paste0(&amp;quot;&amp;lt;a href=&#39;&amp;quot;, urls_url,&amp;quot;&#39; target=&#39;_blank&#39;&amp;gt;&amp;quot;, urls_url,&amp;quot;&amp;lt;/a&amp;gt;&amp;quot;), urls_url)
+         ) %&amp;gt;%
+  as.data.frame() %&amp;gt;%
+  select(screen_name, created_at, text, tweet_link, content_link, hashtags) %&amp;gt;%
+  as.data.frame() %&amp;gt;%
+  rename(User = screen_name,
+         Posted = created_at,
+         Tweet = text,
+         `Tweet Link` = tweet_link,
+         Hashtags = hashtags,
+        `External Content` = content_link)
+
+DT::datatable(favs, escape = F, rownames = F
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

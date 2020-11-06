@@ -16,37 +16,20 @@ featured: false
 image:
   caption:
   focal_point: Right
-links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/brndngrhm
 location: San Francisco
 math: true
 projects:
 - internal-project
 publishDate: "2019-11-27T00:00:00Z"
-slides: example
 summary: Presentation on how we use R for reporting purposes at CHOP
 tags: []
 title: Shiny New Things - Using R to Bridge the Gap in EMR Reporting
 url_code: ""
 url_pdf: ""
 url_slides: ""
-url_video: "https://rstudio.com/conference/"
+url_video: "https://rstudio.com/resources/rstudioconf-2020/shiny-new-things-using-r-bridge-the-gap-in-electronic-medical-record-reporting/"
 ---
 
-{{% alert note %}}
-Check back later and click on the **Video** button above to view the recorded talk
-{{% /alert %}}
 
-<!--
-Slides can be added in a few ways:
+View the talk [here.]("https://rstudio.com/resources/rstudioconf-2020/shiny-new-things-using-r-bridge-the-gap-in-electronic-medical-record-reporting/")
 
-- **Create** slides using Academic's [*Slides*](https://sourcethemes.com/academic/docs/managing-content/#create-slides) feature and link using `slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
--->

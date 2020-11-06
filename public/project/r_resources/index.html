@@ -73,7 +73,7 @@
   
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%7CWork+Sans%7CRoboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow%7CWork+Sans%7CRoboto+Mono&display=swap">
   
 
   
@@ -539,10 +539,52 @@
   <div class="article-container">
 
     <div class="article-style">
-      
+      <pre><code class="language-{r}" data-lang="{r}">library(rtweet)
+library(dplyr)
+library(lubridate)
+library(reactable)
 
-<h3 id="coming-soon">Coming Soon!!</h3>
+show_tweet &lt;- function(user){
+  get_timeline(user, n=3200) %&gt;% 
+    mutate(year = year(created_at)) %&gt;% 
+    filter(year == 2019) %&gt;% 
+    arrange(-favorite_count) %&gt;% 
+    slice(1) %&gt;% 
+    pull(status_id) %&gt;% 
+    paste0('https://twitter.com/', user,  '/status/', .) %&gt;% browseURL()
+}
 
+
+favs_raw &lt;- rtweet::get_favorites(&quot;brndngrhm&quot;, n = 3000)
+
+hashtags &lt;- favs_raw %&gt;%
+  select(status_id, hashtags) %&gt;%
+  as.data.frame()
+
+hashtags$hashtags &lt;- sapply(hashtags$hashtags, paste, collapse=&quot;,&quot;)
+
+favs &lt;- favs_raw %&gt;%
+  select(-hashtags) %&gt;%
+  left_join(., hashtags, by = &quot;status_id&quot;) %&gt;%
+  arrange(desc(created_at)) %&gt;%
+  mutate(created_at = as.Date(created_at),
+         hashtags = gsub(',','; ', hashtags),
+         hashtags = ifelse(hashtags == &quot;NA&quot;, &quot; &quot;, hashtags),
+         tweet_link =  paste0(&quot;&lt;a href='https://twitter.com/&quot;, screen_name,  &quot;/status/&quot;, status_id, &quot;' target='_blank'&gt; Go To Tweet &lt;/a&gt;&quot;),
+         content_link = ifelse(!is.na(urls_url), paste0(&quot;&lt;a href='&quot;, urls_url,&quot;' target='_blank'&gt;&quot;, urls_url,&quot;&lt;/a&gt;&quot;), urls_url)
+         ) %&gt;%
+  as.data.frame() %&gt;%
+  select(screen_name, created_at, text, tweet_link, content_link, hashtags) %&gt;%
+  as.data.frame() %&gt;%
+  rename(User = screen_name,
+         Posted = created_at,
+         Tweet = text,
+         `Tweet Link` = tweet_link,
+         Hashtags = hashtags,
+        `External Content` = content_link)
+
+DT::datatable(favs, escape = F, rownames = F
+</code></pre>
     </div>
 
     
@@ -677,7 +719,7 @@
 
     <div class="media-body">
       <h5 class="card-title"><a href="/">Brendan Graham</a></h5>
-      <h6 class="card-subtitle">Senior Clinical Data Analyst</h6>
+      <h6 class="card-subtitle">Data Scientist</h6>
       <p class="card-text">My interests include health care data science and predictive modeling in an operational setting.</p>
       <ul class="network-icon" aria-hidden="true">
   
@@ -900,7 +942,7 @@
   
 
   <p class="powered-by">
-    &copy; Brendan Graham, 2019 &middot; 
+    © Brendan Graham, 2020 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

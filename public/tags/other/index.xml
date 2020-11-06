@@ -5,7 +5,7 @@
     <link>/tags/other/</link>
       <atom:link href="/tags/other/index.xml" rel="self" type="application/rss+xml" />
     <description>Other</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Sun, 24 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2020</copyright><lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Other</title>
@@ -13,23 +13,30 @@
     </image>
     
     <item>
+      <title>Routeabaga</title>
+      <link>/project/routeabaga/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>/project/routeabaga/</guid>
+      <description>&lt;h3 id=&#34;routeabagahttpsbrndngrhmshinyappsiorouteabaga&#34;&gt;&lt;a href=&#34;https://brndngrhm.shinyapps.io/Routeabaga/&#34;&gt;Routeabaga&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This is a simple website to help philly-area cyclists share and discover new routes. The site sources routes from a google sheet linked this &lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLScAJz4tpKESbKfPZnADoPGhpm2Dy-M-45O6Pl1gf7x07rx4XA/viewform&#34;&gt;google form&lt;/a&gt;, applies some formatting, adds some filters and then presents the routes in the table you see above.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Wissahickon Valley Park Explorer</title>
       <link>/project/wissahickon/</link>
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
       <guid>/project/wissahickon/</guid>
-      <description>&lt;p&gt;The motivation for creating this app is two-fold:&lt;br /&gt;
-  1. I couldnt find something like this online and I wanted it, so I made it, and&lt;br /&gt;
-  2. It gave me the oppurtnity to learn more about creating interactive maps in R, specifically using the &lt;code&gt;leaflet&lt;/code&gt; package.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://brndngrhm.shinyapps.io/Wissahickon_Valley_Park_Explorer/&#34; target=&#34;_blank&#34;&gt;Check it out here!&lt;/a&gt; and read below to learn more about the app.&lt;/p&gt;
-
+      <description>&lt;p&gt;The motivation for creating this app is two-fold:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I couldnt find something like this online and I wanted it, so I made it, and&lt;/li&gt;
+&lt;li&gt;It gave me the oppurtnity to learn more about creating interactive maps in R, specifically using the &lt;code&gt;leaflet&lt;/code&gt; package.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://brndngrhm.shinyapps.io/Wissahickon_Valley_Park_Explorer/&#34;&gt;Check it out here!&lt;/a&gt; and read below to learn more about the app.&lt;/p&gt;
 &lt;p&gt;Moving from Fishtown to the Wissahickon neighborhood gives us an amazing oppurtunity to explore the nearby trails basically whenever we want. Being near the southern end of the woods  means we end up exposed to a limited number of trails. While the trails themselves are well documented in Google Maps and by the
-&lt;a href=&#34;https://www.fow.org/visit-the-park/&#34; target=&#34;_blank&#34;&gt;Friends of the Wissahickon&lt;/a&gt;, I haven&amp;rsquo;t been able to find anywhere that actually provides any hiking routes.&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;Wissahickon Valley Park Explorer&lt;/strong&gt; app lets a user plan their visit to the Wiss by viewing some suggested routes, view the locations of some attractions (statues, covered bridges, caves&amp;hellip;) and see parking and trailhead locations. While most of what I just mentioned is already available in a &lt;a href=&#34;https://www.google.com/maps/d/u/1/edit?mid=13bLD32SSIsOkay-FgK5NqHWOmrBIPUXS&amp;amp;ll=40.03639125389725%2C-75.21352925836845&amp;amp;z=14&#34; target=&#34;_blank&#34;&gt;detailed map&lt;/a&gt; created by the Friends of the Wissahickon, this app improves on that by including some specified hiking loops  that a user can toggle on/off, as well as some notes on what to expect on certain trails - like if a portion of a trail tends to flood or is composed of loose rock. These miscellaneous notes come from my geo-tagged notes I make while hiking. My hope is to create a dozen or so routes over the next year, comlete with detailed information for each one.&lt;/p&gt;
-
-&lt;p&gt;Read about the data used and development process on my &lt;a href=&#34;www.example.com&#34; target=&#34;_blank&#34;&gt;blog post&lt;/a&gt; about it, or check it out on &lt;a href=&#34;https://github.com/brndngrhm/wissahickon_valley_explorer&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
-
+&lt;a href=&#34;https://www.fow.org/visit-the-park/&#34;&gt;Friends of the Wissahickon&lt;/a&gt;, I haven&amp;rsquo;t been able to find anywhere that actually provides any hiking routes.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Wissahickon Valley Park Explorer&lt;/strong&gt; app lets a user plan their visit to the Wiss by viewing some suggested routes, view the locations of some attractions (statues, covered bridges, caves&amp;hellip;) and see parking and trailhead locations. While most of what I just mentioned is already available in a &lt;a href=&#34;https://www.google.com/maps/d/u/1/edit?mid=13bLD32SSIsOkay-FgK5NqHWOmrBIPUXS&amp;amp;ll=40.03639125389725%2C-75.21352925836845&amp;amp;z=14&#34;&gt;detailed map&lt;/a&gt; created by the Friends of the Wissahickon, this app improves on that by including some specified hiking loops  that a user can toggle on/off, as well as some notes on what to expect on certain trails - like if a portion of a trail tends to flood or is composed of loose rock. These miscellaneous notes come from my geo-tagged notes I make while hiking. My hope is to create a dozen or so routes over the next year, comlete with detailed information for each one.&lt;/p&gt;
+&lt;p&gt;Read about the data used and development process on my &lt;a href=&#34;www.example.com&#34;&gt;blog post&lt;/a&gt; about it, or check it out on &lt;a href=&#34;https://github.com/brndngrhm/wissahickon_valley_explorer&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
 
 
 

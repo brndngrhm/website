@@ -5,33 +5,12 @@
     <link>/authors/</link>
       <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2020</copyright><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Authors</title>
       <link>/authors/</link>
     </image>
-    
-    <item>
-      <title></title>
-      <link>/authors/admin/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;I am a senior clinical data analyst at the Center for Healthcare Quality and Analytics (CHQA) at the Children&amp;rsquo;s Hospital of Philadelphia, where I get to apply my data analysis, statistics and visualization skills on a wide range of operational and quality improvement projects.&lt;/p&gt;
-
-&lt;p&gt;I enjoy working with stakeholders to make data operational - whether that means visualizing data in new and useful ways, using data to improve workflows (like automating a previously manual process) and or using predictive modelling to understand and anticipate patient flow.&lt;/p&gt;
-
-&lt;p&gt;When I&amp;rsquo;m not at work, you can find me on a bike or in the woods.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Robert Ford</title>
-      <link>/authors/robert-ford/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/authors/robert-ford/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

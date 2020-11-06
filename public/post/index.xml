@@ -5,7 +5,7 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2019</copyright><lastBuildDate>Sat, 07 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2020</copyright><lastBuildDate>Sat, 07 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Blog</title>
@@ -18,6 +18,8 @@
       <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       <guid>/post/blogdown_netlify_create/</guid>
       <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;This post isn’t about getting you set up with R Studio, Blogdown, Hugo and Netlify. If you’ve come across this and are just starting out, go read &lt;a href=&#34;https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#build-your-site-in-rstudio&#34;&gt;this post&lt;/a&gt; instead, its simply the best quick start guide on getting your site started.&lt;/p&gt;
@@ -97,7 +99,7 @@ subtitle = &amp;quot;&amp;quot;
 &lt;ul&gt;
 &lt;li&gt;Pick one of these and put in &lt;code&gt;data/themes/my_theme.toml&lt;/code&gt; and specify it in &lt;code&gt;config/_default/params.toml&lt;/code&gt;&lt;br /&gt;
 &lt;/li&gt;
-&lt;li&gt;Create your own then in tell Academic to use your new theme by setting &lt;code&gt;theme = &amp;quot;my_theme&amp;quot;&lt;/code&gt; in &lt;code&gt;config/_default/params.toml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create your own then in tell Academic to use your new theme by setting &lt;code&gt;theme = &#34;my_theme&#34;&lt;/code&gt; in &lt;code&gt;config/_default/params.toml&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To make your own theme, find one you like and copy it: for example here is my theme, which is stored in &lt;code&gt;data/themes/&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  # Theme metadata
@@ -120,7 +122,7 @@ subtitle = &amp;quot;&amp;quot;
   home_section_odd = &amp;quot;#fdfbf2&amp;quot;
   home_section_even = &amp;quot;#fdfbf2&amp;quot;
   &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;then in &lt;code&gt;config/_default/params.toml&lt;/code&gt; i have &lt;code&gt;theme = &amp;quot;bg_theme&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;then in &lt;code&gt;config/_default/params.toml&lt;/code&gt; i have &lt;code&gt;theme = &#34;bg_theme&#34;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The same process applies to picking your own fonts as well (see &lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#custom-theme&#34;&gt;Academic Custom Theme &amp;amp; Font docs&lt;/a&gt;)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;new-posts&#34; class=&#34;section level3&#34;&gt;
@@ -149,6 +151,8 @@ subtitle = &amp;quot;&amp;quot;
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       <guid>/post/creating-interactive-maps-with-leaflet/</guid>
       <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -189,6 +193,8 @@ subtitle = &amp;quot;&amp;quot;
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       <guid>/post/use-changepoint-detection-to-analyze-your-intervals/</guid>
       <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
