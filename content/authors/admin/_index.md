@@ -20,7 +20,7 @@ interests:
 - Drumming
 name: Brendan Graham
 organizations:
-- name: Children's Hospital of Philadelphia
+- name:
   url: ""
 role: Data Scientist
 social:
@@ -36,9 +36,3 @@ social:
 superuser: true
 ---
 
-I am a Data Scientist at the Center for Healthcare Quality and Analytics (CHQA) at the Children's Hospital of Philadelphia, where I get to apply my data analysis, statistics and visualization skills on a wide range of operational and quality improvement projects.
-
-
-I enjoy working with stakeholders to make data operational - whether that means visualizing data in new and useful ways, using data to improve workflows (like automating a previously manual process) and or using predictive modelling to understand and anticipate patient flow.
-
-When I'm not at work, you can find me on a bike or in the woods.

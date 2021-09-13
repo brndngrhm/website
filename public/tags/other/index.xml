@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Other | Brendan Graham</title>
-    <link>/tags/other/</link>
-      <atom:link href="/tags/other/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://brendangraham.netlify.com/tags/other/</link>
+      <atom:link href="https://brendangraham.netlify.com/tags/other/index.xml" rel="self" type="application/rss+xml" />
     <description>Other</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2020</copyright><lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2021</copyright><lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://brendangraham.netlify.com/img/icon-192.png</url>
       <title>Other</title>
-      <link>/tags/other/</link>
+      <link>https://brendangraham.netlify.com/tags/other/</link>
     </image>
     
     <item>
       <title>Routeabaga</title>
-      <link>/project/routeabaga/</link>
+      <link>https://brendangraham.netlify.com/project/routeabaga/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/project/routeabaga/</guid>
+      <guid>https://brendangraham.netlify.com/project/routeabaga/</guid>
       <description>&lt;h3 id=&#34;routeabagahttpsbrndngrhmshinyappsiorouteabaga&#34;&gt;&lt;a href=&#34;https://brndngrhm.shinyapps.io/Routeabaga/&#34;&gt;Routeabaga&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This is a simple website to help philly-area cyclists share and discover new routes. The site sources routes from a google sheet linked this &lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLScAJz4tpKESbKfPZnADoPGhpm2Dy-M-45O6Pl1gf7x07rx4XA/viewform&#34;&gt;google form&lt;/a&gt;, applies some formatting, adds some filters and then presents the routes in the table you see above.&lt;/p&gt;
 </description>
@@ -24,9 +24,9 @@
     
     <item>
       <title>Wissahickon Valley Park Explorer</title>
-      <link>/project/wissahickon/</link>
+      <link>https://brendangraham.netlify.com/project/wissahickon/</link>
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/project/wissahickon/</guid>
+      <guid>https://brendangraham.netlify.com/project/wissahickon/</guid>
       <description>&lt;p&gt;The motivation for creating this app is two-fold:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;I couldnt find something like this online and I wanted it, so I made it, and&lt;/li&gt;

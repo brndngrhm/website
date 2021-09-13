@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project | Brendan Graham</title>
-    <link>/tags/project/</link>
-      <atom:link href="/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://brendangraham.netlify.com/tags/project/</link>
+      <atom:link href="https://brendangraham.netlify.com/tags/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Project</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2020</copyright><lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2021</copyright><lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://brendangraham.netlify.com/img/icon-192.png</url>
       <title>Project</title>
-      <link>/tags/project/</link>
+      <link>https://brendangraham.netlify.com/tags/project/</link>
     </image>
     
     <item>
       <title>Routeabaga</title>
-      <link>/project/routeabaga/</link>
+      <link>https://brendangraham.netlify.com/project/routeabaga/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/project/routeabaga/</guid>
+      <guid>https://brendangraham.netlify.com/project/routeabaga/</guid>
       <description>&lt;h3 id=&#34;routeabagahttpsbrndngrhmshinyappsiorouteabaga&#34;&gt;&lt;a href=&#34;https://brndngrhm.shinyapps.io/Routeabaga/&#34;&gt;Routeabaga&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This is a simple website to help philly-area cyclists share and discover new routes. The site sources routes from a google sheet linked this &lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLScAJz4tpKESbKfPZnADoPGhpm2Dy-M-45O6Pl1gf7x07rx4XA/viewform&#34;&gt;google form&lt;/a&gt;, applies some formatting, adds some filters and then presents the routes in the table you see above.&lt;/p&gt;
 </description>
@@ -24,9 +24,9 @@
     
     <item>
       <title>Everyone Everywhere Music Analysis Tool</title>
-      <link>/project/spotify_analyzer/</link>
+      <link>https://brendangraham.netlify.com/project/spotify_analyzer/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/project/spotify_analyzer/</guid>
+      <guid>https://brendangraham.netlify.com/project/spotify_analyzer/</guid>
       <description>&lt;p&gt;This app calls the Spotify API and leverages the &amp;ldquo;Features&amp;rdquo; that Spotify uses to classify songs. This project started when we were joking that we could use AI to write a new Everyone Everywhere song. That conversation reminded me of a &lt;a href=&#34;https://peerchristensen.netlify.com/post/clustering-springsteen-albums-with-spotifyr/&#34;&gt;blog post&lt;/a&gt; I had seen where the author used the &lt;code&gt;spotifyR&lt;/code&gt; package to get song data and analyze the songs. I thought it would be interesting to analyze my own band&amp;rsquo;s songs in the same manner, and also provide anyone a way to search for bands and see how Spotify classifies their songs in terms of energy, danceability, valence, liveness, etc&amp;hellip;&lt;/p&gt;
 &lt;h4 id=&#34;check-out-the-app-herehttpsbrndngrhmshinyappsioeveryoneeverywheremusicanalysistool&#34;&gt;Check out the app &lt;a href=&#34;https://brndngrhm.shinyapps.io/EveryoneEverywhereMusicAnalysisTool/&#34;&gt;here&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Upon load, the app displays an analysis of Everyone Everywhere tracks. A user can pick a feature, such as energy, and the app will rank tracks according to energy, and show a distribution of track energy for every album associated with the band. The lower left chart uses k-means to cluster artist tracks, and the lower right radar charts show how albums compare to each other across several features.&lt;/p&gt;
@@ -36,9 +36,9 @@
     
     <item>
       <title>MyRide</title>
-      <link>/project/my_ride/</link>
+      <link>https://brendangraham.netlify.com/project/my_ride/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/project/my_ride/</guid>
+      <guid>https://brendangraham.netlify.com/project/my_ride/</guid>
       <description>&lt;p&gt;This purpose of this app is to help cyclists review and analyze their interval workout to see if they hit the right numbers.&lt;/p&gt;
 &lt;h4 id=&#34;check-out-the-app-herehttpsbrndngrhmshinyappsiomyride&#34;&gt;Check out the app &lt;a href=&#34;https://brndngrhm.shinyapps.io/MyRide/&#34;&gt;here&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Intervals are a common training method for cyclists, and are usually structured in an alternating easy/hard/easy/hard manner. A typical interval workout might be something like 10 minute warm up, 5 minutes @ 250 watts followed by 5 minutes @ 130 watts, repeated 4 times then followed by a 10 minute cool down. On an indoor trainer its pretty easy to pay attention during a workout and make sure your riding at the specified power or heart rate. But outdoors it&amp;rsquo;s much harder to keep a close eye on your cycling computer because you&amp;rsquo;ve got to be almost constantly scanning the road and your surroundings.&lt;/p&gt;
@@ -49,9 +49,9 @@
     
     <item>
       <title>RideTracker</title>
-      <link>/project/ride_tracker/</link>
+      <link>https://brendangraham.netlify.com/project/ride_tracker/</link>
       <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/project/ride_tracker/</guid>
+      <guid>https://brendangraham.netlify.com/project/ride_tracker/</guid>
       <description>&lt;p&gt;The &lt;a href=&#34;https://brndngrhm.shinyapps.io/RideTracker/&#34;&gt;RideTracker&lt;/a&gt; app was the first reactive data viz app I developed. It provides a way for me to track my training and commuting, in both a weekly snapshot view as well as over time, in ways that the &lt;a href=&#34;https://github.com/fawda123/rStrava&#34;&gt;Strava&lt;/a&gt; user profile page doesn&amp;rsquo;t provide.&lt;/p&gt;
 &lt;p&gt;At the time, I&amp;rsquo;d been seeing so many cool examples of Shiny apps and really wanted to make my own. I decided to make one using my Cycling data because I had just started to take training seriously and began racing competitively. I was looking for a way to analyze my training volume on a weekly basis and comparatively over time. The App is built on the &lt;code&gt;flexdashboard&lt;/code&gt; framework with a &lt;code&gt;Shiny&lt;/code&gt; reactive engine allowing me to dynamically filter the charts based on the sidebar inputs. I was able to retrieve my data using the &lt;a href=&#34;https://github.com/fawda123/rStrava&#34;&gt;&lt;code&gt;rStrava&lt;/code&gt; package&lt;/a&gt;, and created all the charts using the  &lt;code&gt;highcharter&lt;/code&gt; package.&lt;/p&gt;
 &lt;p&gt;Read more about the development process on my &lt;a href=&#34;wwww.example.com&#34;&gt;blog post&lt;/a&gt; or view the project on &lt;a href=&#34;https://github.com/brndngrhm/rides&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
@@ -60,9 +60,9 @@
     
     <item>
       <title>Wissahickon Valley Park Explorer</title>
-      <link>/project/wissahickon/</link>
+      <link>https://brendangraham.netlify.com/project/wissahickon/</link>
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/project/wissahickon/</guid>
+      <guid>https://brendangraham.netlify.com/project/wissahickon/</guid>
       <description>&lt;p&gt;The motivation for creating this app is two-fold:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;I couldnt find something like this online and I wanted it, so I made it, and&lt;/li&gt;

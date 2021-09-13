@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo | Brendan Graham</title>
-    <link>/categories/hugo/</link>
-      <atom:link href="/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://brendangraham.netlify.com/categories/hugo/</link>
+      <atom:link href="https://brendangraham.netlify.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <description>Hugo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2020</copyright><lastBuildDate>Sat, 07 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2021</copyright><lastBuildDate>Sat, 07 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://brendangraham.netlify.com/img/icon-192.png</url>
       <title>Hugo</title>
-      <link>/categories/hugo/</link>
+      <link>https://brendangraham.netlify.com/categories/hugo/</link>
     </image>
     
     <item>
       <title>Customizing a Website with R, Blogdown, Hugo and Netlify</title>
-      <link>/post/blogdown_netlify_create/</link>
+      <link>https://brendangraham.netlify.com/post/blogdown_netlify_create/</link>
       <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/post/blogdown_netlify_create/</guid>
+      <guid>https://brendangraham.netlify.com/post/blogdown_netlify_create/</guid>
       <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://brendangraham.netlify.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://brendangraham.netlify.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;This post isn’t about getting you set up with R Studio, Blogdown, Hugo and Netlify. If you’ve come across this and are just starting out, go read &lt;a href=&#34;https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#build-your-site-in-rstudio&#34;&gt;this post&lt;/a&gt; instead, its simply the best quick start guide on getting your site started.&lt;/p&gt;

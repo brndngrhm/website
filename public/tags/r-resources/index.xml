@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Resources | Brendan Graham</title>
-    <link>/tags/r-resources/</link>
-      <atom:link href="/tags/r-resources/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://brendangraham.netlify.com/tags/r-resources/</link>
+      <atom:link href="https://brendangraham.netlify.com/tags/r-resources/index.xml" rel="self" type="application/rss+xml" />
     <description>R Resources</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2020</copyright><lastBuildDate>Sat, 21 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2021</copyright><lastBuildDate>Sat, 21 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://brendangraham.netlify.com/img/icon-192.png</url>
       <title>R Resources</title>
-      <link>/tags/r-resources/</link>
+      <link>https://brendangraham.netlify.com/tags/r-resources/</link>
     </image>
     
     <item>
       <title>R Resources</title>
-      <link>/project/r_resources/</link>
+      <link>https://brendangraham.netlify.com/project/r_resources/</link>
       <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/project/r_resources/</guid>
+      <guid>https://brendangraham.netlify.com/project/r_resources/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;library(rtweet)
 library(dplyr)
 library(lubridate)

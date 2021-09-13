@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>All Talks | Brendan Graham</title>
-    <link>/talk/</link>
-      <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://brendangraham.netlify.com/talk/</link>
+      <atom:link href="https://brendangraham.netlify.com/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>All Talks</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2020</copyright><lastBuildDate>Mon, 27 Jan 2020 11:40:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Brendan Graham, 2021</copyright><lastBuildDate>Mon, 27 Jan 2020 11:40:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon-192.png</url>
+      <url>https://brendangraham.netlify.com/img/icon-192.png</url>
       <title>All Talks</title>
-      <link>/talk/</link>
+      <link>https://brendangraham.netlify.com/talk/</link>
     </image>
     
     <item>
       <title>Shiny New Things - Using R to Bridge the Gap in EMR Reporting</title>
-      <link>/talk/rstudio_conf_2020/</link>
+      <link>https://brendangraham.netlify.com/talk/rstudio_conf_2020/</link>
       <pubDate>Mon, 27 Jan 2020 11:40:00 +0000</pubDate>
-      <guid>/talk/rstudio_conf_2020/</guid>
+      <guid>https://brendangraham.netlify.com/talk/rstudio_conf_2020/</guid>
       <description>&lt;p&gt;View the talk &lt;a href=&#34;%22https://rstudio.com/resources/rstudioconf-2020/shiny-new-things-using-r-bridge-the-gap-in-electronic-medical-record-reporting/%22&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>

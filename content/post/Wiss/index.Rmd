@@ -17,7 +17,7 @@ image:
 projects: [wissahickon]
 output:
   blogdown::html_page:
-    toc: true
+    toc: false
     number_sections: false
     toc_depth: 1
 draft: TRUE
@@ -33,7 +33,7 @@ Shortly after moving to the Wissahickon neighborhood, I was looking for a detail
 
 ![](wiss_map.jpg)
 
-(source: http://phillyskyline.com/2015/04/22/happy-earth-day-and-other-assorted-one-mans-trash-affairs/)  
+source: [phillyskyline.com](http://phillyskyline.com/2015/04/22/happy-earth-day-and-other-assorted-one-mans-trash-affairs/) 
 
 After some more goolging I found this [interactive map](https://www.google.com/maps/d/u/0/viewer?mid=13bnd0IRNwzTpI7VFPASNSWXC5yk) created by the Friends of the Wissahickon. It has a lot of the park attrractions I was looking for in a map, but I really wanted to be able to make it my own and document my hiking loops, notes and tips. Rather than just make a copy of the Google map, I decided to create my own using `leaflet` and `R`.
 
