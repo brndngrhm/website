@@ -138,7 +138,7 @@ CMD [&quot;R&quot;, &quot;-e&quot;, &quot;rmarkdown::run(&#39;/app/wiss_map.Rmd&
 <li>activate cloudshell in top right - make sure you’re in your newly created project</li>
 <li>pull your image from Dockerhub : <code>docker pull user/image</code> (replace user with your username and image with your image)</li>
 <li>check for image ID: <code>docker images</code></li>
-<li>then tag your image: <code>docker tag pull user/image gcr.io/{project ID}/{image tag}</code></li>
+<li>then tag your image: <code>docker tag user/image gcr.io/{project ID}/{image tag}</code></li>
 <li>then push tagged image to gcr <code>docker push gcr.io/{project ID}/{image tag}</code>
 <ul>
 <li>refresh repositories to make sure it worked</li>

@@ -132,7 +132,7 @@ The following video will walk you through the process (or follow the some steps 
  * activate cloudshell in top right - make sure you're in your newly created project
  * pull your image from Dockerhub : `docker pull user/image` (replace user with your username and image with your image)
  * check for image ID: `docker images`
- * then tag your image: `docker tag pull user/image gcr.io/{project ID}/{image tag}`
+ * then tag your image: `docker tag user/image gcr.io/{project ID}/{image tag}`
  * then push tagged image to gcr `docker push gcr.io/{project ID}/{image tag}`
      * refresh repositories to make sure it worked
   * in GCR sidebar menu go to `Cloud Run` -> create service -> select container image you just made -> change service name if needed -> set the correct container port (8080 for shiny and 3838 for flexdashboards)
