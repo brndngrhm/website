@@ -1,0 +1,165 @@
+---
+title: Shiny + Docker + Google Cloud Run
+author: Brendan Graham
+date: '2021-09-13'
+slug: siny-docker-digital-ocean
+categories: [R, shiny, docker, google cloud run]
+tags: []
+subtitle: 'Learn how to deploy a dockerized shiny app on Google Cloud Run'
+summary: 'Learn how to deploy a dockerized shiny app on Google Cloud Run'
+authors: []
+lastmod: '2021-09-13T14:28:25-05:00'
+featured: yes 
+image:
+  caption:
+  focal_point:
+  preview_only:
+projects:
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+    toc_depth: 1
+draft: FALSE
+---
+
+<script src="index_files/header-attrs/header-attrs.js"></script>
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="step-0-requirements" class="section level2">
+<h2>Step 0: Requirements</h2>
+<ul>
+<li>A shiny app, some analysis, or a report you want to publish</li>
+<li><a href="https://www.docker.com/">Docker</a> installed</li>
+<li>A <a href="https://hub.docker.com/">Dockerhub</a> account</li>
+<li>A Google account</li>
+</ul>
+</div>
+<div id="step-1-containerize-your-app" class="section level2">
+<h2>Step 1: Containerize Your App</h2>
+<div id="why-containerize-your-app" class="section level4">
+<h4>Why containerize your app?</h4>
+<p>Containerizing bundles your app with all its dependencies, allowing you to deploy anywhere.</p>
+</div>
+<div id="use-the-following-steps-to-build-a-docker-image-of-your-app" class="section level4">
+<h4>Use the following steps to build a Docker image of your app:</h4>
+<p>Once your app is finished and ready for deployment, use the <code>{renv}</code> package to create a lockfile by calling <code>renv::snapshot()</code>. A lockfile captures the state of your app’s R package dependencies, so if you do any further development using additional packages make sure to run this again to update the lockfile. The lockfile will be referenced in the dockerfile to install your app’s dependencies.</p>
+<p>Next create a <code>Dockerfile</code>, which is a text document with a set of steps that contains all the commands to build and run your app. Here’s the Dockerfile I used in my Wissahickon valley explorer project, with a few things to note:</p>
+<ul>
+<li>I’m using the <code>rocker/rstudio</code> base image</li>
+<li>the lockfile is copied and all packages <em>and their dependencies</em> are installed with <code>renv::restore()</code></li>
+<li>port <code>3838</code> is used for flexdashboards while <code>8080</code> should be used for shiny apps. als note the different ways to run each type of app (<code>runApp</code> vs <code>run</code>)</li>
+</ul>
+<pre class="docker"><code># Docker file mostly comes from 
+# https://www.statworx.com/at/blog/how-to-dockerize-shinyapps/ 
+# and 
+# https://medium.com/analytics-vidhya/deploying-a-shiny-flexdashboard-with-docker-cca338a10d12
+
+# Base image https://hub.docker.com/u/rocker/ 
+FROM rocker/rstudio 
+
+# system libraries of general use
+## install debian packages
+RUN apt-get update -qq &amp;&amp; apt-get -y --no-install-recommends install \
+    libxml2-dev \
+    libcairo2-dev \
+    libsqlite3-dev \
+    libmariadbd-dev \
+    libpq-dev \
+    libssh2-1-dev \
+    unixodbc-dev \
+    libcurl4-openssl-dev \
+    libssl-dev
+
+## update system libraries
+RUN apt-get update &amp;&amp; \
+    apt-get upgrade -y &amp;&amp; \
+    apt-get clean
+
+# copy renv.lock file   
+COPY renv.lock ./renv.lock
+
+# make directory and copy Rmarkdown flexdashboard file in it
+COPY /app  ./app
+
+# install renv &amp; restore packages
+RUN Rscript -e &#39;install.packages(&quot;renv&quot;)&#39;
+RUN Rscript -e &#39;renv::restore()&#39;
+
+# expose port on Docker container
+EXPOSE 3838
+
+# run shiny app as localhost and on exposed port in Docker container
+# CMD [&quot;R&quot;, &quot;-e&quot;, &quot;shiny::runApp(&#39;/app/wiss_map.Rmd&#39;, host = &#39;0.0.0.0&#39;, port = 8080)&quot;]
+
+# run flexdashboard as localhost and on exposed port in Docker container
+CMD [&quot;R&quot;, &quot;-e&quot;, &quot;rmarkdown::run(&#39;/app/wiss_map.Rmd&#39;, shiny_args = list(port = 3838, host = &#39;0.0.0.0&#39;))&quot;]</code></pre>
+<p>Next you’ll need to build and run your image using the following commands in the terminal. I prefer to open my project folder in <code>VScode</code> and use the terminal in there.</p>
+<ul>
+<li>First, ensure Docker is running locally</li>
+<li>Then build your image using <code>docker build --rm --force-rm -t wiss_map .</code>
+<ul>
+<li>Here I tagged the image as <code>wiss_map</code>, you should change the tag to suit your project.</li>
+</ul></li>
+<li>Then run <code>docker image list</code> to make sure you can see the newly created image</li>
+<li>Finally, run your image using <code>docker run --rm -d -p 38:38 wiss_map</code> (update <code>wiss_map</code> with whatever you tagged your image is in the above step)</li>
+</ul>
+<p>If everything went OK you should see the container running in the sidebar of VSCode. You can also right-click it and open in the browser.</p>
+<p><img src="container_running.png" /></p>
+</div>
+</div>
+<div id="step-2-push-to-dockerhub" class="section level2">
+<h2>Step 2: Push to Dockerhub</h2>
+<p>Assuming you have an account on <a href="https://hub.docker.com/">Dockerhub</a>, follow these steps to push your image:</p>
+<ul>
+<li>In the terminal log into DockerHub: <code>docker login --username=yourhubusername</code> then enter your pw when prompted
+<ul>
+<li>find the image ID: <code>docker images</code></li>
+<li>tag the image: <code>docker tag &lt;IMAGE ID&gt; yourhubusername/&lt;image_name&gt;:firsttry</code> (or whatever tag you want to use)</li>
+<li>push the image to Dockerhub: <code>docker push yourhubusername/&lt;image_name&gt;</code></li>
+</ul></li>
+</ul>
+<p>Then go do Dockerhub and verify you can see your image</p>
+</div>
+<div id="step-3-deploy-on-google-cloud-run" class="section level2">
+<h2>Step 3: Deploy on Google Cloud Run</h2>
+<div id="what-is-google-cloud-run" class="section level4">
+<h4>What is Google Cloud Run?</h4>
+<p>Google Cloud Run is a way to deploy a containerized app serverlessly on Google cloud (serverless means you only pay for what you use). Google Cloud Run uses Google Container Registry to manage containers, so the workflow will look something like this:</p>
+<p>finish developing app -&gt; create dockerfile -&gt; build image -&gt; push image to dockerhub -&gt; pull image from dockerhub in google cloudshell -&gt; tag &amp; push image to Google Container Registry -&gt; deploy to Cloud Run</p>
+<p>The following video will walk you through the process (or follow the some steps below):
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Zul8u5YypA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<ul>
+<li>Sign into your google account, then go to <a href="https://console.cloud.google.com/" class="uri">https://console.cloud.google.com/</a> and start a new project.</li>
+<li>go to container registry -&gt; images -&gt; new project</li>
+<li>enable container registry api</li>
+<li>activate cloudshell in top right - make sure you’re in your newly created project</li>
+<li>pull your image from Dockerhub : <code>docker pull user/image</code> (replace user with your username and image with your image)</li>
+<li>check for image ID: <code>docker images</code></li>
+<li>then tag your image: <code>docker tag user/image gcr.io/{project ID}/{image tag}</code></li>
+<li>then push tagged image to gcr <code>docker push gcr.io/{project ID}/{image tag}</code>
+<ul>
+<li>refresh repositories to make sure it worked</li>
+</ul></li>
+<li>in GCR sidebar menu go to <code>Cloud Run</code> -&gt; create service -&gt; select container image you just made -&gt; change service name if needed -&gt; set the correct container port (8080 for shiny and 3838 for flexdashboards)</li>
+</ul>
+</div>
+</div>
+<div id="step-3a-deploy-a-new-image" class="section level2">
+<h2>Step 3a: Deploy a new image</h2>
+<p>In the event you make revisions and want to re-deploy, use these steps:
+* revise app
+* rebuild image using step 1 above
+* push new image to dockerhub using step 2, think about tagging it <code>v2</code> or something
+* go to Cloud Run, pull and tag the new version using steps above
+* on the Cloud Run sidebar click on Image -&gt; deploy new revision -&gt; select new image in dropdown -&gt; deploy</p>
+</div>
+<div id="step-4-optional-add-app-as-subdomain-to-your-website" class="section level2">
+<h2>Step 4 (optional): Add app as subdomain to your website</h2>
+<ul>
+<li>Cloud run on sidebar -&gt; manage custom domains</li>
+<li>add your app as sub-domain to your existing website and manage from there using the instructions</li>
+</ul>
+</div>

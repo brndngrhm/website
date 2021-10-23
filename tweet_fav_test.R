@@ -8,7 +8,7 @@ library(reactable)
 show_tweet <- function(user){
   get_timeline(user, n=3200) %>% 
     mutate(year = year(created_at)) %>% 
-    filter(year == 2019) %>% 
+    filter(year == 2020) %>% 
     arrange(-favorite_count) %>% 
     slice(1) %>% 
     pull(status_id) %>% 
