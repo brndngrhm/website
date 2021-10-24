@@ -31,5 +31,5 @@ url_video: "https://rstudio.com/resources/rstudioconf-2020/shiny-new-things-usin
 ---
 
 
-View the talk [here.]("https://rstudio.com/resources/rstudioconf-2020/shiny-new-things-using-r-bridge-the-gap-in-electronic-medical-record-reporting/")
+View the talk [here.](https://rstudio.com/resources/rstudioconf-2020/shiny-new-things-using-r-bridge-the-gap-in-electronic-medical-record-reporting/)
 
